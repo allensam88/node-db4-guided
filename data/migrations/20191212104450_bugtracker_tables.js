@@ -16,7 +16,7 @@ exports.up = function (knex) {
                 .notNullable()
                 .references('id')
                 .inTable('roles')
-                .onDelete('CASCADE')
+                .onDelete('CASCADE') // CASCADE, RESTRICT, DO NOTHING, SET NULL
                 .onUpdate('CASCADE');
         })
         .createTable('tickets', tbl => {
